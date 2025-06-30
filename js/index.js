@@ -2,17 +2,17 @@ var swiper = new Swiper(".mySwiper", {
   loop: true,
   slidesPerView: 1,
   spaceBetween: 10,
-  allowTouchMove: true,
+  allowTouchMove: false,
   breakpoints:{
     650: {
       slidesPerView: 2,
-      spaceBetween: 30
+      spaceBetween: 30,
+      allowTouchMove: true,
     }
   },
   autoplay: {
     delay: 4500,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true
+    disableOnInteraction: false
   },
   pagination: {
     el: ".swiper-pagination",
@@ -24,14 +24,16 @@ var swiper = new Swiper(".mySwiper", {
   }
 });
 
-window.addEventListener('resize', function () {
-        swiper.update();
-});
-
 var swiper = new Swiper(".Reviews", {
   loop: true,
+  allowTouchMove: false,
   slidesPerView: 1,
   spaceBetween: 10,
+  breakpoints:{
+    650: {
+      allowTouchMove: true,
+    }
+  },
   autoplay: {
     delay: 4500,
     disableOnInteraction: false,
