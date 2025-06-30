@@ -1,18 +1,9 @@
 var swiper = new Swiper(".mySwiper", {
   loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  },
+  slidesPerView: 1,
+  spaceBetween: 10,
+  touchEventsTarget: 'swiper-wrapper',
   breakpoints:{
-    200: {
-        mousewheel: true,
-        keyboard: true,
-        slidesPerView: 1,
-        spaceBetween: 10,
-          allowSlidePrev: true,
-          allowSlideNext: true
-    },
     650: {
       slidesPerView: 2,
       spaceBetween: 30
@@ -21,6 +12,11 @@ var swiper = new Swiper(".mySwiper", {
   autoplay: {
     delay: 4500,
     disableOnInteraction: false,
+    pauseOnMouseEnter: true
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
   },
   navigation: {
     nextEl: ".swiper-button-next",
