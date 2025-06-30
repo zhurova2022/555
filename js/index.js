@@ -2,7 +2,7 @@ var swiper = new Swiper(".mySwiper", {
   loop: true,
   slidesPerView: 1,
   spaceBetween: 10,
-  touchEventsTarget: 'swiper-wrapper',
+  allowTouchMove: true,
   breakpoints:{
     650: {
       slidesPerView: 2,
